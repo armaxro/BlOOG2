@@ -11,6 +11,10 @@ DB_PWD);
 //tableau associatif en fetch
 $db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
 
-$perm1 = new Permission();
+$perm1 = new Permission(5, "r", "t");
+
+//affichage grace aux getters
+
+echo $perm1->getPermissionId();
 
 var_dump($perm1);
